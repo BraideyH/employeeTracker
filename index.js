@@ -1,7 +1,7 @@
 const inquirer = require('inquirer');
 const db = require('./db/connection');
 
-db.conect(err => {
+db.connect(err => {
     if (err) throw err;
     console.log('Connection to database secured.');
     employee_tracker();
@@ -12,7 +12,7 @@ var employee_tracker = function () {
         type: 'list',
         name: 'prompt',
         message: 'What would you like to do?',
-        choices: ['View All Departments', 'View All Roles', 'View All Employees', 'Add A Department', 'Add A Role', 'Update An Employee Role', 'Log Out']
+        choices: ['View All Departments', 'View All Roles', 'View All Employees', 'Add an Employee', 'Add A Department', 'Add A Role', 'Update An Employee Role', 'Log Out']
     }]).then((answers) => {
         if (answers.prompt === 'View All Departments') {
             db.query(`SELECT * FROM department`, (err, result) => {
