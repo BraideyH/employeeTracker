@@ -4,6 +4,7 @@
   
   This app allows busy employers to easily store and track employee data.
 
+[employeeTrackerDemo.webm](https://github.com/BraideyH/employeeTracker/assets/143223506/8661cce6-ffe4-4fc7-aed8-c6a965099186)
 
 
   ## Installation
